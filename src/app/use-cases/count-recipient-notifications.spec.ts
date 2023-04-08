@@ -28,7 +28,7 @@ describe('Count Recipient Notifications Notification', () => {
     expect(count).toEqual(2);
   });
 
-  it('should be able to show when no have notifications', async () => {
+  it('should not be able to show a count a non existing notification', async () => {
     const notificationsRepository = new InMemoryNotificationsRepository();
     const countRecipientNotifications = new CountRecipientNotifications(
       notificationsRepository,
